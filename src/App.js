@@ -42,7 +42,7 @@ const LC_QUERY = `
 
 const fetchLeetCodeData = async (username) => {
   const body = JSON.stringify({ query: LC_QUERY, variables: { username } });
-  const API_URL = "http://localhost:8000/leetcode";
+const API_URL = "https://leetcode-1-uh2o.onrender.com/leetcode";
 
   const res = await fetch(API_URL, {
     method: "POST",
