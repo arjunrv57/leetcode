@@ -42,9 +42,9 @@ const LC_QUERY = `
 
 const fetchLeetCodeData = async (username) => {
   const body = JSON.stringify({ query: LC_QUERY, variables: { username } });
-  const proxyUrl = `https://corsproxy.io/?url=${encodeURIComponent("https://leetcode.com/graphql")}`;
+  const API_URL = "http://localhost:8000/leetcode";
 
-  const res = await fetch(proxyUrl, {
+  const res = await fetch(API_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
